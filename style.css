@@ -1,41 +1,137 @@
-*{
+/* Grid layout */
+.container {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  /* Typography */
+  h1 {
+    font-size: 48px;
+    font-weight: 700;
     margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-}
-body{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 10vh;
-}
-.container{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 10px;
-}
-.container .coin-price{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    color: #3F3D56;
+  }
+  
+  h2 {
+    font-size: 32px;
+    font-weight: 700;
+    margin: 0;
+    color: #3F3D56;
+  }
+  
+  p {
+    font-size: 16px;
+    line-height: 24px;
+    margin: 0;
+    color: #7D7D7D;
+  }
+  
+  /* Colors */
+  body {
+    background-color: #F6F6F6;
+  }
+  
+  .primary {
+    color: #3F3D56;
+  }
+  
+  .secondary {
+    color: #7D7D7D;
+  }
+  
+  .accent {
+    color: #3A86FF;
+  }
+  
+  /* Illustrations */
+  .logo {
+    height: 40px;
+    margin-right: 10px;
+  }
+  
+  /* Interactive elements */
+  .button {
+    display: inline-block;
+    background-color: #3A86FF;
+    color: #fff;
     padding: 10px 20px;
     border-radius: 5px;
-    box-shadow: 0 0 3px #ccc;
-    margin: 7px;
-}
+    text-decoration: none;
+    transition: background-color 0.2s ease-in-out;
+  }
+  
+  .button:hover {
+    background-color: #235FB6;
+  }
+  #statistics {
+    margin-top: 100px;
+  }
 
-.container .coin-price .logo{
-    width: 70px;
-    margin-right: 10px;
-}
-.container .coin-price .logo img{
+  .trade-table {
     width: 100%;
-}
-.container .coin-price div{
-    display: block;
-}
-.container .coin-price div h1{
-    font-size: 20px;
-}
+    border-collapse: collapse;
+  }
+  
+  .trade-table th,
+  .trade-table td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .trade-table th {
+    background-color: #f2f2f2;
+    color: #333;
+  }
+  
+  /* Style for the table */
+table {
+    border-collapse: collapse;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  
+  /* Style for the table headers */
+  th {
+    background-color: #eaeaea;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #ccc;
+  }
+  
+  /* Style for the table cells */
+  td {
+    font-size: 14px;
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #ccc;
+  }
+  
+  /* Style for the table rows */
+  tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+  
+  /* Style for the form */
+  form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Style for the form inputs */
+  form input {
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 200px;
+    font-size: 14px;
+  }
+  

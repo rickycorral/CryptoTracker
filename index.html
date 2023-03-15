@@ -1,40 +1,91 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
+<html>
+  <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>live Coin Price</title>
+    <title>Crypto Trade Tracker</title>
     <link rel="stylesheet" href="style.css">
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-</head>
-<body>
-	<div class="container">
-		<div class="coin-price">
-		  <div class="logo"><img src="https://blogger.googleusercontent.com/img/a/AVvXsEi32rDKQR2Swi7YfHjDzyZUBGEmxTz77OClnm24SZl7kWuls7fsVCIfAObY_JRJIReQnBWZIPSVfDLSqDvqeu4CCXCoNQIoUGK-OSDUGMtDJFxh9vmU6WGajIgXH4CsR_-sXU0qWbyJTJl7N0BSTB8HcAGSpCJ54G1daZPnU6h2oANo2CTGsbHCoaGJHQ"></div>
-		  <div>
-			<h1>$<span id="bitcoin"></span></h1>
-			<h1>Bitcoin</h1>
-		  </div>
-		</div>
-		<div class="trade">
-		  <input type="text" placeholder="Enter your trade details..." id="trade-input">
-		  <button id="add-trade-btn">Add Trade</button>
-		</div>
-		<table id="trade-table">
-		  <thead>
-			<tr>
-			  <th>Date</th>
-			  <th>Trade Details</th>
-			</tr>
-		  </thead>
-		  <tbody>
-		  </tbody>
-		</table>
-	  </div>
-	  
-	
-   
-    <script src="ap.js"></script>
-</body>
+  </head>
+  <body>
+    <header>
+      <h1>Crypto Trade Tracker</h1>
+      <nav>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Trades</a></li>
+          <li><a href="#">Statistics</a></li>
+          <li><a href="#">About</a></li>
+        </ul>
+      </nav>
+    </header>
+    
+    <main>
+      <section>
+        <h2>Add Trade</h2>
+        <form id="trade-form">
+          <div>
+            <label for="coin">Coin</label>
+            <input type="text" id="coin" required>
+          </div>
+          <div>
+            <label for="price">Price (USD)</label>
+            <input type="number" id="price" min="0" step="0.01" required>
+          </div>
+          <div>
+            <label for="amount">Amount</label>
+            <input type="number" id="amount" min="0" step="0.0001" required>
+          </div>
+          <div>
+            <label for="date">Date</label>
+            <input type="date" id="date" required>
+          </div>
+          <button type="submit">Add Trade</button>
+        </form>
+      </section>
+      
+      <section>
+        <h2>Trades</h2>
+        <table id="trade-table">
+          <thead>
+            <tr>
+              <th>Coin</th>
+              <th>Price (USD)</th>
+              <th>Amount</th>
+              <th>Date</th>
+              <th>Total (USD)</th>
+            </tr>
+          </thead>
+          <tbody>
+          </tbody>
+        </table>
+      </section>
+      
+      <section>
+        <h2>Statistics</h2>
+        <div id="statistics">
+        </div>
+      </section>
+    </main>
+
+    <aside>
+      <div class="illustration-container">
+        <img src="https://via.placeholder.com/150" alt="Bitcoin Logo">
+        <img src="https://via.placeholder.com/150" alt="Ethereum Logo">
+        <img src="https://via.placeholder.com/150" alt="Placeholder Image">
+        <img src="https://via.placeholder.com/150" alt="Placeholder Image">
+        <img src="https://via.placeholder.com/150" alt="Placeholder Image">
+      </div>
+      <div class="button-container">
+        <button>Buy Bitcoin</button>
+        <button>Sell Bitcoin</button>
+        <button>Buy Ethereum</button>
+        <button>Sell Ethereum</button>
+      </div>
+    </aside>
+
+    <footer>
+      <p>&copy; 2023 Crypto Trade Tracker</p>
+    </footer>
+
+    <script src="app.js"></script>
+  </body>
 </html>
