@@ -1,2 +1,2 @@
-# A simple Calculator
+# A simple CryptoTracker
 My first true app.
